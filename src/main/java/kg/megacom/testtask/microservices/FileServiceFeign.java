@@ -1,7 +1,7 @@
 package kg.megacom.testtask.microservices;
 
 
-import feign.Response;
+import kg.megacom.testtask.microservices.json.Response;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestPart;

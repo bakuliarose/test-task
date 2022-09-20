@@ -1,4 +1,4 @@
-package kg.megacom.testtask.models;
+package kg.megacom.testtask.models.entries;
 
 import kg.megacom.testtask.enums.Status;
 import lombok.Data;
@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "tb_user")
+@Table(name = "user")
 public class User {
 
     @Id
@@ -15,7 +15,7 @@ public class User {
     private Long id;
     private String name;
     private String email;
-    private String imageUrl;
+    private String imageUri;
     @Enumerated(EnumType.STRING)
     private Status status;
 }

@@ -19,13 +19,6 @@ public class UserController {
         return userService.save(user);
     }
 
-    @PostMapping("/remove")
-    private void User(@RequestBody User user) { return userService.delete(user);
-    }
-
-    @PostMapping("/update")
-    private User User(@RequestBody User user) {return userService.update(user); }
-
     @PostMapping("/add/file")
     private User addImageToUser(@RequestParam Long userId, @RequestPart MultipartFile file) {
         User user = userService.getById(userId);
@@ -38,16 +31,12 @@ public class UserController {
 
 
         Date timestamp;
-        addUser(status, timestamp);
+        addUser(Status status, Date timestamp);
         if (status = "online",  date = timestamp) {
             return userService.save(status, timestamp);
         else{
-                return userService.addUser(status, (MultipartFile) timestamp);
+                return userService.addUser(status, timestamp);
             }
         }
-    }
-
-    private void addUser(User status, Date timestamp) {
-
     }
 }
